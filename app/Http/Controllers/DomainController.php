@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Services\DomainIntelligenceService;
-use illuminate\Http\Request;
-use illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use Exception;
 
 class DomainController extends Controller
@@ -18,6 +18,7 @@ class DomainController extends Controller
         $validated = $request->validate([
             'domain' => 'required|string',
         ]);
+
         try {
             $data = $this->service->lookup($validated['domain']);
             return response()->json([
