@@ -18,7 +18,6 @@ class DomainController extends Controller
         $validated = $request->validate([
             'domain' => 'required|string',
         ]);
-
         try {
             $data = $this->service->lookup($validated['domain']);
             return response()->json([
