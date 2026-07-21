@@ -8,8 +8,7 @@ use Exception;
 class DomainIntelligenceService
 {
     private string $rdapBaseUrl = 'https://rdap.org/domain/';
-
-    /**
+    /** 
      * @param string $domain
      * @return array
      * @throws Exception
